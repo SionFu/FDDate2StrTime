@@ -88,7 +88,25 @@
     now = [[formatter stringFromDate:nowTime] integerValue];
     last = [[formatter stringFromDate:date] integerValue];
     if (now > last) {
-        strNumberTime =  [NSString stringWithFormat:@"%ld年前",now - last];
+        NSInteger yearTime = now - last;
+        switch (yearTime) {
+            case 1:{
+                 strNumberTime =  [NSString stringWithFormat:@"来自去年"];
+            }
+                break;
+            case 2:{
+                 strNumberTime =  [NSString stringWithFormat:@"来自前年"];
+            }
+                break;
+            case 3:{
+                 strNumberTime =  [NSString stringWithFormat:@"来自大前年"];
+            }
+                break;
+            default: {
+                strNumberTime =  [NSString stringWithFormat:@"%ld年前",yearTime];
+            }
+                break;
+        }
     }else if(now < last){
         strNumberTime =  [NSString stringWithFormat:@"%ld年后", last - now];
     }
