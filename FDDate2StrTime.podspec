@@ -38,8 +38,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "All source code is licensed under the [MIT License]"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.icense      = "All source code is licensed under the [MIT License]"
+  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
   s.author             = { "Fu_sion" => "fu_sion@live.com" }
   # Or just: s.author    = "Fu_sion"
   # s.authors            = { "Fu_sion" => "fu_sion@live.com" }
-  # s.social_media_url   = "http://twitter.com/Fu_sion"
+   s.social_media_url   = "http://twitter.com/Fu_sion"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -63,11 +63,11 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+ s.platform     = :ios
+ s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+ s.ios.deployment_target = "5.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/FDDate2StrTime.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/FDDate2StrTime.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +90,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "FDDate2StrTime", "FDDate2StrTime/FDDate2StrTime/NSDate+FDDate2StrTime.{h,m}"
+  s.exclude_files = "FDDate2StrTime/NSDate+FDDate2StrTime"
 
-  # s.public_header_files = "Classes/**/*.h"
+   s.public_header_files = "FDDate2StrTime/FDDate2StrTime/NSDate+FDDate2StrTime.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -129,7 +129,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
